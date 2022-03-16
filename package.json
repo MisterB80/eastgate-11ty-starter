@@ -1,0 +1,30 @@
+{
+  "name": "eastgate-llty-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --output-style compressed -o src/_includes/css src/scss",
+    "serve:webpack": "webpack --mode development --watch",
+    "watch:css": "onchange 'src/scss' -- npm run sass",
+    "serve:eleventy": "eleventy --serve",
+    "start": "run-p serve:* watch:css",
+    "clean": "rm -rf _site/*",
+    "build:webpack": "webpack --mode production",
+    "build:eleventy": "npm run clean && eleventy",
+    "build": "run-s clean build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-img": "^1.1.0",
+    "bulma": "^0.9.3",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

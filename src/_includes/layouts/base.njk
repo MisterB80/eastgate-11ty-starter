@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      {% include "partials/meta-info.njk" %}
+    <style>
+      {% include "css/main.css" %}</style>
+  </head>
+  <body>
+    <header>
+      {% include "partials/header.njk" %}
+    </header>
+    <main>
+      <div class="container"> {% block content %}{% endblock %}
+        </div>
+      </main>
+      <footer class="footer">
+        {% include "partials/footer.njk" %}
+      </footer>
+      <script src="/scripts/main.js"></script>
+    </body>
+  </html>

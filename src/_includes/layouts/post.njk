@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+    <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
+    {% if tags %}
+        <ul class="tags-list" aria-describedby="tags-desc">
+            {% for tag in tags %}
+                <li>
+                    <a href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <article>
+        <div>
+            {{ content | safe }}
+        </div>
+    </article>
+{% endblock %}

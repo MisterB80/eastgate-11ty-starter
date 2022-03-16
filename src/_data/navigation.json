@@ -1,0 +1,30 @@
+{
+    "primary": [
+        {
+            "text": "Home",
+            "url": "/"
+        },
+        {
+            "text": "Images",
+            "url": "/image-examples"
+        },
+        {
+            "text": "About",
+            "url": "/about-us/"
+        },
+        {
+            "text": "Blog",
+            "url": "/blog/"
+        }
+    ],
+    "secondary": [
+        {
+            "text": "Privacy Statement",
+            "url": "/privacy/"
+        },
+        {
+            "text": "Jobs",
+            "url": "/jobs/"
+        }
+    ]
+}
