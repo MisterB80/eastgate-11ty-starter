@@ -13,8 +13,7 @@
     <div class="navbar-start"></div>
     <div class="navbar-end">
       {% for item in navigation.primary %}
-        {# TODO: Wire up active state #}
-        <a class="navbar-item" href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+        <a class="navbar-item{{ helpers.getLinkActiveState(item.url, page.url) | safe }}" href="{{ item.url }}">{{ item.text }}</a>
       {% endfor %}
     </div>
   </div>
