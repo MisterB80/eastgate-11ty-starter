@@ -5,6 +5,22 @@ const w3DateFilter = require('./src/filters/w3-date-filter.js');
 // Scripts
 const imageShortcode = require('./src/scripts/images.js');
 
+// Transforms
+const htmlmin = require('html-minifier');
+
+const htmlMinTransform = (value, outputPath) => {
+    if (outputPath && outputPath.indexOf('.html') > -1) {
+        return htmlmin.minify(value, {
+            useShortDoctype: true,
+            removeComments: true,
+            collapseWhitespace: true,
+            minifyCSS: true
+        });
+    }
+
+    return value;
+};
+
 module.exports = config => {
 
     // Create a helpful production flag
@@ -24,6 +40,12 @@ module.exports = config => {
 
     // Add shortcodes
     config.addNunjucksAsyncShortcode("image", imageShortcode);
+
+    // Add transforms
+    // Only minify HTML if we are in production because it slows builds _right_ down
+    if (isProduction) {
+        config.addTransform('htmlmin', htmlMinTransform);
+    }
 
     return {
         markdownTemplateEngine: 'njk',
