@@ -4,7 +4,7 @@ layout: layouts/home.njk
 summary: "Starter template for Eleventy (11ty) static site generator (SSG)"
 ---
 
-#  An Eleventy starter template by Eastgate Digital
+#  An Eleventy starter template by [Eastgate Digital](http://eastgatedigital.co.uk)
 
 A base template with npm scripts for common functions
 
@@ -14,3 +14,5 @@ A base template with npm scripts for common functions
  - [node-sass](https://www.npmjs.com/package/node-sass) for SASS compilation
  - [webpack](https://webpack.js.org/) for bundling js files
  - [html-minifier](https://www.npmjs.com/package/html-minifier) for optimising the final HTML output
+
+ 
